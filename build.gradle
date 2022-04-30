@@ -1,0 +1,35 @@
+plugins {
+    id 'java-library'
+}
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.13'
+    api 'org.apache.commons:commons-math3:3.6.1'
+    implementation 'com.google.guava:guava:29.0-jre'
+    
+    
+    // ImGUI
+    implementation "io.imgui.java:binding:1.76-0.9"
+    implementation "io.imgui.java:lwjgl3:1.76-0.9"
+    runtimeOnly "io.imgui.java:natives-windows:1.76-0.9"
+    
+    // LWJGL
+    implementation(platform("org.lwjgl:lwjgl-bom:3.3.1"))
+
+	implementation("org.lwjgl:lwjgl")
+	implementation("org.lwjgl:lwjgl-glfw")
+	implementation("org.lwjgl:lwjgl-meshoptimizer")
+	implementation("org.lwjgl:lwjgl-openal")
+	implementation("org.lwjgl:lwjgl-opengl")
+	
+	runtimeOnly("org.lwjgl:lwjgl::natives-windows")
+	runtimeOnly("org.lwjgl:lwjgl::glfw.natives-windows")
+	runtimeOnly("org.lwjgl:lwjgl-meshoptimizer::natives-windows")
+	runtimeOnly("org.lwjgl:lwjgl-openal::natives-windows")
+	runtimeOnly("org.lwjgl:lwjgl-opengl::natives-windows")
+}
