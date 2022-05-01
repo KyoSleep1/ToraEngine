@@ -14,9 +14,9 @@ dependencies {
     
     
     // ImGUI
-    implementation "io.imgui.java:binding:1.76-0.9"
-    implementation "io.imgui.java:lwjgl3:1.76-0.9"
-    runtimeOnly "io.imgui.java:natives-windows:1.76-0.9"
+    implementation "io.github.spair:imgui-java-binding:1.81.0"
+    implementation "io.github.spair:imgui-java-lwjgl3:1.81.0"
+    implementation "io.github.spair:imgui-java-natives-windows:1.81.0"
     
     // LWJGL
     implementation(platform("org.lwjgl:lwjgl-bom:3.3.1"))
@@ -28,7 +28,7 @@ dependencies {
 	implementation("org.lwjgl:lwjgl-opengl")
 	
 	runtimeOnly("org.lwjgl:lwjgl::natives-windows")
-	runtimeOnly("org.lwjgl:lwjgl::glfw.natives-windows")
+	runtimeOnly("org.lwjgl:lwjgl-glfw::natives-windows")
 	runtimeOnly("org.lwjgl:lwjgl-meshoptimizer::natives-windows")
 	runtimeOnly("org.lwjgl:lwjgl-openal::natives-windows")
 	runtimeOnly("org.lwjgl:lwjgl-opengl::natives-windows")
