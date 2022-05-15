@@ -11,6 +11,7 @@ import static org.lwjgl.opengl.GL11.glClearColor;
 import dev.sleep.example.client.gui.GuiTest;
 import imgui.ImGui;
 import imgui.flag.ImGuiConfigFlags;
+import imgui.flag.ImGuiWindowFlags;
 
 public class RenderManager {
 	
@@ -21,7 +22,7 @@ public class RenderManager {
 	
 	public RenderManager(WindowManager windowManager) {
 		this.windowManager = windowManager;
-		guiTest = new GuiTest();
+		guiTest = new GuiTest("Test", 0, 0, 1920, 1080, ImGuiWindowFlags.NoTitleBar | ImGuiWindowFlags.NoMove | ImGuiWindowFlags.NoResize);
 	}
 
 	public void clearColor() {
