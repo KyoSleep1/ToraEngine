@@ -1,4 +1,4 @@
-package dev.sleep.tora.client.render;
+package dev.sleep.tora.client.render.manager;
 
 import static org.lwjgl.glfw.GLFW.glfwGetCurrentContext;
 import static org.lwjgl.glfw.GLFW.glfwMakeContextCurrent;

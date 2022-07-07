@@ -1,4 +1,4 @@
-package dev.sleep.tora.client.render;
+package dev.sleep.tora.client.render.manager;
 
 import org.lwjgl.glfw.Callbacks;
 import org.lwjgl.glfw.GLFWErrorCallback;

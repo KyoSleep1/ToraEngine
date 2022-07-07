@@ -3,30 +3,26 @@ package dev.sleep.tora.thread;
 import static org.lwjgl.glfw.GLFW.glfwWindowShouldClose;
 
 import dev.sleep.tora.ToraMain;
-import dev.sleep.tora.client.render.RenderManager;
-import dev.sleep.tora.client.render.WindowManager;
+import dev.sleep.tora.client.render.manager.RenderManager;
+import dev.sleep.tora.client.render.manager.WindowManager;
 
 public class RenderThread extends Thread {
 
-	public RenderManager renderManager;
-	public WindowManager windowManager;
+    public RenderThread(String threadName) {
+        setName(threadName);
+    }
 
-	public RenderThread(String threadName) {
-		setName(threadName);
+    @Override
+    public void run() {
+        RenderManager renderManager = ToraMain.renderManager;
+        WindowManager windowManager = ToraMain.windowManager;
 
-		renderManager = ToraMain.engineInstance.renderManager;
-		windowManager = ToraMain.engineInstance.windowManager;
-	}
+        windowManager.initialize();
 
-	@Override
-	public void run() {
-		windowManager.initialize();
-		
-		while (!glfwWindowShouldClose(windowManager.windowPointer)) {
-			renderManager.update();
-		}
-		
-		windowManager.destroy();
-	}
+        while (!glfwWindowShouldClose(windowManager.windowPointer)) {
+            renderManager.update();
+        }
 
+        windowManager.destroy();
+    }
 }
