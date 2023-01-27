@@ -3,8 +3,8 @@ package dev.sleep.tora.thread;
 import static org.lwjgl.glfw.GLFW.glfwWindowShouldClose;
 
 import dev.sleep.tora.ToraMain;
-import dev.sleep.tora.client.render.manager.RenderManager;
-import dev.sleep.tora.client.render.manager.WindowManager;
+import dev.sleep.tora.client.manager.RenderManager;
+import dev.sleep.tora.client.manager.WindowManager;
 
 public class RenderThread extends Thread {
 
